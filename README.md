@@ -167,7 +167,7 @@
  
 - Modify macros definitions in *esp_panel_board_supported_conf.h* to enable target board.
 - Enable file macro definition: #define ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED       (0) ---> #define ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED       (1)
-- Cancel the comment of the corresponding board:// #define BOARD_VIEWE_UEDX80480043E_WB_A ---> #define BOARD_VIEWE_UEDX80480043E_WB_A
+- Cancel the comment of the corresponding board:// #define BOARD_VIEWE_UEDX46460015_MD50ET ---> #define BOARD_VIEWE_UEDX46460015_MD50ET
 - here's part of the modified *esp_panel_board_supported_conf.h* file:
 
     ```c
@@ -185,14 +185,14 @@
     // #define BOARD_VIEWE_UEDX24320028E_WB_A
     // #define BOARD_VIEWE_UEDX24320035E_WB_A
     // #define BOARD_VIEWE_UEDX32480035E_WB_A
-    // #define BOARD_VIEWE_UEDX46460015_MD50ET
+    #define BOARD_VIEWE_UEDX46460015_MD50ET
     // #define BOARD_VIEWE_UEDX48270043E_WB_A
     // #define BOARD_VIEWE_UEDX48480021_MD80E_V2
     // #define BOARD_VIEWE_UEDX48480021_MD80E
     // #define BOARD_VIEWE_UEDX48480021_MD80ET
     // #define BOARD_VIEWE_UEDX48480028_MD80ET
     // #define BOARD_VIEWE_UEDX48480040E_WB_A
-    #define BOARD_VIEWE_UEDX80480043E_WB_A
+    // #define BOARD_VIEWE_UEDX80480043E_WB_A
     // #define BOARD_VIEWE_UEDX80480050E_AC_A
     // #define BOARD_VIEWE_UEDX80480050E_WB_A
     // #define BOARD_VIEWE_UEDX80480050E_WB_A_2
