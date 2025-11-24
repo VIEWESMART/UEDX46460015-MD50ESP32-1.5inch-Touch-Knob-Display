@@ -21,11 +21,6 @@
 using namespace esp_panel::drivers;
 using namespace esp_panel::board;
 
-/*if you use BOARD_VIEWE_UEDX24240013_MD50E,please open it*/
-// #define GPIO_NUM_KNOB_PIN_A     7
-// #define GPIO_NUM_KNOB_PIN_B     6
-// #define GPIO_BUTTON_PIN         GPIO_NUM_9
-
 /*if you use BOARD_VIEWE_UEDX46460015_MD50ET or UEDX48480021_MD80E/T,please open it*/
 #define GPIO_NUM_KNOB_PIN_A     6
 #define GPIO_NUM_KNOB_PIN_B     5
