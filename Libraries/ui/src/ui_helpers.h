@@ -27,7 +27,7 @@ void _ui_basic_set_property(lv_obj_t * target, int id, int val);
 void _ui_dropdown_set_property(lv_obj_t * target, int id, int val);
 
 #define _UI_IMAGE_PROPERTY_IMAGE 0
-void _ui_image_set_property(lv_obj_t * target, int id, uint8_t * val);
+void _ui_image_set_property(lv_obj_t * target, int id, const lv_img_dsc_t * val);
 
 #define _UI_LABEL_PROPERTY_TEXT 0
 void _ui_label_set_property(lv_obj_t * target, int id, const char * val);

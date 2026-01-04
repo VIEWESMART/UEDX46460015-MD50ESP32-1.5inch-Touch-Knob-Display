@@ -24,7 +24,7 @@ void _ui_dropdown_set_property(lv_obj_t * target, int id, int val)
     if(id == _UI_DROPDOWN_PROPERTY_SELECTED) lv_dropdown_set_selected(target, val);
 }
 
-void _ui_image_set_property(lv_obj_t * target, int id, uint8_t * val)
+void _ui_image_set_property(lv_obj_t * target, int id, const lv_img_dsc_t * val)
 {
     if(id == _UI_IMAGE_PROPERTY_IMAGE) lv_img_set_src(target, val);
 }

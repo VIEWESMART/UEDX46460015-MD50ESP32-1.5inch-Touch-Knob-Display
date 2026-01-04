@@ -158,19 +158,19 @@ void   LVGL_knob_event(void *event)
 
         
         if(index2==1)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)& ui_img_1kaorou_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_1kaorou_png);
         else if(index2==2)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)& ui_img_2kaoji_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_2kaoji_png);
         else if(index2==3)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)& ui_img_3danta_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_3danta_png);
         else if(index2==4)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)& ui_img_4pisa_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_4pisa_png);
         else if(index2==5)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)& ui_img_5liupai_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_5liupai_png);
         else if(index2==6)
         {
            
-            _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)& ui_img_6shutiao_png);
+            _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_6shutiao_png);
         }
        
    
@@ -254,11 +254,11 @@ void ui_event_background(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_LEFT) {//滑动效果依然没有
         lv_indev_wait_release(lv_indev_get_act());
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_2kaoji_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_2kaoji_png);
     }
     if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
         lv_indev_wait_release(lv_indev_get_act());
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_3danta_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_3danta_png);
     }
 
 
@@ -268,19 +268,19 @@ void ui_event_background(lv_event_t * e)
         if(index2>=7)
             index2=1;
         if(index2==1)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_2kaoji_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_2kaoji_png);
         else if(index2==2)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_3danta_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_3danta_png);
         else if(index2==3)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_4pisa_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_4pisa_png);
         else if(index2==4)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_5liupai_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_5liupai_png);
         else if(index2==5)
-        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_6shutiao_png);
+        _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_6shutiao_png);
         else if(index2==6)
         {
            
-            _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, (uint8_t *)&ui_img_1kaorou_png);
+            _ui_image_set_property(ui_background, _UI_IMAGE_PROPERTY_IMAGE, & ui_img_1kaorou_png);
         }
     }
     
@@ -331,7 +331,7 @@ void ui_event_Button7(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
          selected_index = lv_roller_get_selected(ui_Roller1); // 获取当前选中的索引  
-         HF_number = atoi(options2[selected_index]); // 使用atoi将字符串转换为整数
+         HF_number=  atoi(options2[selected_index]);
         ESP_LOGE(TAG, "ui_Roller1 ==%d",selected_index);
         _ui_label_set_property(ui_Label1, _UI_LABEL_PROPERTY_TEXT, options[selected_index]);
         HF_ui_screen_id=1;
