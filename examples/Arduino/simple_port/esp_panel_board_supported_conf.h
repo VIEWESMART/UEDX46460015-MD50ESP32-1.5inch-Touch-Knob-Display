@@ -136,7 +136,7 @@
  */
 // #define BOARD_VIEWE_SMARTRING
 // #define BOARD_VIEWE_UEDX24240013_MD50E
-// #define BOARD_VIEWE_UEDX46460015_MD50ET
+#define BOARD_VIEWE_UEDX46460015_MD50ET
 // #define BOARD_VIEWE_UEDX48480021_MD80E
 // #define BOARD_VIEWE_UEDX48480021_MD80E_V2
 // #define BOARD_VIEWE_UEDX48480021_MD80ET
@@ -152,7 +152,7 @@
 // #define BOARD_VIEWE_UEDX80480050E_WB_A
 // #define BOARD_VIEWE_UEDX80480050E_WB_A_2
 // #define BOARD_VIEWE_UEDX80480050E_AC_A
-#define BOARD_VIEWE_UEDX80480070E_WB_A
+// #define BOARD_VIEWE_UEDX80480070E_WB_A
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////// File Version ///////////////////////////////////////////////////////////
