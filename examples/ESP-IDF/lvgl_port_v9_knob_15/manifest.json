@@ -1,0 +1,57 @@
+{
+    "name": "Viewe ESP32 S3 Touch Knob Display",
+    "maintainer": "LVGL",
+    "hostOperatingsystem": [
+        "Windows",
+        "Linux",
+        "MacOS"
+    ],
+    "environment": [
+        "ESP-IDF"
+    ],
+    "hardware": {
+        "chipVendor": "Espressif",
+        "manufacturer": "Viewe",
+        "specs": {
+            "MCU": "ESP32-S3 (240MHz)",
+            "RAM": "512 KB (internal), 8MB (external)",
+            "Flash": "16 MB",
+            "GPU": "None",
+            "Resolution": "466x466",
+            "Display Size": "1.5\u201d",
+            "Interface": "QSPI",
+            "Color Depth": "16-bit",
+            "Technology": "AMOLED",
+            "DPI": "439 px/inch",
+            "Touch Pad": "Capacitive (CST820)"
+        }
+    },
+    "description": "The Viewe Touch Knob Display features a 466x466 AMOLED screen with 1000 cd/m² brightness, a rotary knob with push button, and capacitive touch. Powered by an ESP32-S3, it supports Wi-Fi, BLE 5, and BLE Mesh. Ideal for Arduino, ESP-IDF, and LVGL, it’s perfect for smart interfaces and control panels in IoT and AIoT applications.",
+    "shortDescription": "Viewe ESP32 S3 Touch Knob Display project with LVGL support",
+    "urlToClone": "https://github.com/lvgl/lv_port_viewe_knob_15_espidf",
+    "logos": [
+        "https://raw.githubusercontent.com/lvgl/project-creator/master/meta/images/espressif/logo.svg"
+    ],
+    "branches": [
+        "release/v9.3"
+    ],
+    "image": "https://raw.githubusercontent.com/lvgl/lv_port_viewe_knob_15_espidf/master/board_images/board.png",
+    "buy_now_links": ["https://viewedisplay.com/iot_aiot-smart-display/"],
+    "settings": [
+        {
+            "type": "dropdown",
+            "label": "Show performance monitor",
+            "options": [
+                {
+                    "name": "Yes",
+                    "value": "1",
+                    "default": "true"
+                },
+                {
+                    "name": "No",
+                    "value": "0"
+                }
+            ]
+        }
+    ]
+}
