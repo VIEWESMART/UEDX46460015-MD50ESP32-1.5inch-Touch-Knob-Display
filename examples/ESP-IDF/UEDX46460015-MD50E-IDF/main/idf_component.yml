@@ -14,7 +14,6 @@ dependencies:
   esp_lcd_touch_spd2010:
     public: true
     version: ^0.0.1
-  idf: '>5.0.4,!=5.1.1'
   lvgl/lvgl:
     public: true
     version: ^8
