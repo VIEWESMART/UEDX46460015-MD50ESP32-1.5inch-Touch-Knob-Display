@@ -208,7 +208,7 @@
     #### ESP32-C3
     | Setting                               | Value                                 |
     | :-------------------------------: | :-------------------------------:  |
-    | Board                                 | ESP32C3 Dev Module             |
+    | Board                                 | ESP32S3 Dev Module             |
     | CPU Frequency                   | 240MHz (WiFi)                        |
     | Core Debug Level                | None                                 |
     | USB CDC On Boot                | Disabled                              |
