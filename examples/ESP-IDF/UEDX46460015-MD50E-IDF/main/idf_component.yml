@@ -1,6 +1,5 @@
 dependencies:
   espressif/led_strip: "^2.5.5"
-  espressif/knob: "^0.1.5"
   idf: ">5.0.4,!=5.1.1"
   esp_lcd_gc9b71:
     public: true

@@ -14,7 +14,7 @@
 static const char *TAG = "ui";
 extern  int selected_index;
 extern  char * options[];
-extern  char * options2[];
+extern  int options2[];
 extern int options_max_num;
 extern int HF_number;
 ///////////////////// VARIABLES ////////////////////
