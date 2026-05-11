@@ -66,8 +66,14 @@ const lv_img_dsc_t * ui_imgset_back[1] = {&ui_img_back111_png};
 #endif
 #include "led_strip.h"
 
+#ifndef HF_ws2812
+#define HF_ws2812 0
+#endif
+
 //彩灯///
+#if HF_ws2812
 extern  led_strip_handle_t led_strip;
+#endif
 #define LED_STRIP_LED_NUMBERS 8
 int color_RT=1;
 uint32_t red=150;
@@ -183,6 +189,7 @@ else if(color_change>=9)
 }
  void my_timer2(lv_timer_t * timer)
 {
+#if HF_ws2812
     color_running();
 
      /* Set the LED pixel using RGB from 0 (0%) to 255 (100%) for each color */
@@ -197,6 +204,9 @@ else if(color_change>=9)
             /* Refresh the strip to send data */
     ESP_ERROR_CHECK(led_strip_refresh(led_strip));
     //ESP_LOGI(TAG, "LED ON!");
+#else
+    (void)timer;
+#endif
 
 }
  

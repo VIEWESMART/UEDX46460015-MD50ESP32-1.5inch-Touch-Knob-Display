@@ -625,7 +625,7 @@ void app_main(void)
 #endif
 
     #if HF_ws2812
-    led_strip = configure_led();
+    // led_strip = configure_led();
     #endif   
     knob_init(BSP_ENCODER_A, BSP_ENCODER_B);
     button_init(BSP_BTN_PRESS);
