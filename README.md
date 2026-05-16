@@ -1,7 +1,7 @@
 <h1 align = "center">UEDX46460015-MD50ESP32-1.5inch-Touch-Knob-Display</h1>
 
 <p align="center" width="90%">
-    <img src="image/1.5.jpg" alt="">
+    <img src="image/Main.png" alt="">
 </p>
 
  * **English | [中文](./README_CN.md)**
