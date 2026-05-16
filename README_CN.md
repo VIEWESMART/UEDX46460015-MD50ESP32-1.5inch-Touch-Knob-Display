@@ -262,11 +262,6 @@
 * 问：为什么我的板子一直下载程序失败？
 * 答：请按住 “BOOT” 按钮再尝试下载程序。
 
-## 原理图
-<p align="center" width="100%">
-    <img src="schematic/1.5%20MD50E%20SCH.V2.0_00.png" alt="example">
-</p>
-
 ## 资料
 [产品规格书](information/UEDX48480021-MD80E%20V3.3%20SPEC.pdf)
 
@@ -275,3 +270,5 @@
 [按键](information/6x6Silent%20switch.pdf)
 
 [编码器](information/C219783_%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8_EC28A1520401_%E8%A7%84%E6%A0%BC%E4%B9%A6_WJ239718.PDF)
+
+[原理图](schematic/1.5%20MD50E%20SCH.V2.0_00.png)
