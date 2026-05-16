@@ -6,8 +6,6 @@
     <img src="image/Main.png" alt="">
 </p>
 
-# ESP32 1.5 Inch AMOLED Touch Knob Display
-
 -   **UEDX46460015-MD50ET**
     ---
     The **Smart Knob Display** powered by **ESP32-S3**.  
