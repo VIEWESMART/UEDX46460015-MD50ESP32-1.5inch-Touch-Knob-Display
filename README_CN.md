@@ -1,6 +1,6 @@
 <h1 align = "center">UEDX46460015-MD50ESP32 ESP32 1.5寸 AMOLED 触摸旋钮显示屏</h1>
  
- * **English(./README.md)**
+ * **[English](./README.md)**
    
 <p align="center" width="90%">
     <img src="image/Main.png" alt="">
