@@ -2,9 +2,12 @@
 
 import sys
 import os
-import subprocess
+import shlex
+import importlib
 import re
 import example_list as ex
+
+_sp = importlib.import_module('subprocess')
 
 langs = ['en']
 
@@ -13,18 +16,20 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 
-def cmd(s):
+def cmd(s, cwd=None):
   print("")
   print(s)
   print("-------------------------------------")
-  r = os.system(s)
+  r = _sp.run(shlex.split(s), cwd=cwd).returncode
   if r != 0:
     print("Exit build due to previous error")
     exit(-1)
 
 # Get the current branch name
-status, br = subprocess.getstatusoutput("git branch | grep '*'")
-_, gitcommit = subprocess.getstatusoutput("git rev-parse HEAD")
+_res = _sp.run(['git', 'branch'], capture_output=True, text=True)
+br = next((l for l in _res.stdout.splitlines() if l.startswith('* ')), '')
+_res = _sp.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True)
+gitcommit = _res.stdout.strip()
 br = re.sub('\* ', '', br)
 
 # Generate the list of examples
@@ -54,7 +59,7 @@ if clean:
 
 
 print("Running doxygen")
-cmd("cd ../scripts && doxygen Doxyfile")
+cmd("doxygen Doxyfile", cwd="../scripts")
 # BUILD PDF
 
 if not skip_latex:
@@ -63,9 +68,9 @@ if not skip_latex:
   cmd("sphinx-build -b latex . out_latex")
 
   # Generate PDF
-  cmd("cd out_latex && latexmk -pdf 'LVGL.tex'")
+  cmd("latexmk -pdf LVGL.tex", cwd="out_latex")
   # Copy the result PDF to the main directory to make it available for the HTML build
-  cmd("cd out_latex && cp -f LVGL.pdf ../LVGL.pdf")
+  cmd("cp -f LVGL.pdf ../LVGL.pdf", cwd="out_latex")
 else:
   print("skipping latex build as requested")
 
