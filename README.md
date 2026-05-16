@@ -277,12 +277,5 @@ If you need to flash a pre‑compiled binary manually:
 
 [Encoder](information/C219783_%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8_EC28A1520401_%E8%A7%84%E6%A0%BC%E4%B9%A6_WJ239718.PDF)
 
-## DependentLibraries
-* [ESP32_Display_Panel>0.2.1](https://github.com/esp-arduino-libs/ESP32_Display_Panel) (Please [download](./Libraries/ESP32_Display_Panel) the library first as the latest version has not been released yet)
-* [ESP32_IO_Expander](https://github.com/esp-arduino-libs/ESP32_IO_Expander) (Please [download](./Libraries/ESP32_IO_Expander) the library first as the latest version has not been released yet)
-* [ESP32_Button](https://github.com/esp-arduino-libs/ESP32_Button)
-* [ESP32_Knob](https://github.com/esp-arduino-libs/ESP32_Knob)
-* [lvgl-8.4.0](https://lvgl.io)
-
 
 
