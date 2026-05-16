@@ -4,239 +4,246 @@
     <img src="image/1.5.jpg" alt="">
 </p>
 
-## **English | [中文](./README_CN.md)**
+ * **English | [中文](./README_CN.md)**
 
-## Version iteration:
-|   Development board Version   |  Screen size   |   Resolution  | Update date        |Update description|
-| :-------------------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |:-------------------------------: |
-| UEDX46460015-MD50E | 1.5-inch |  466*466  |2024-07-23      | Original version   |
+# ESP32 1.5 Inch AMOLED Touch Knob Display
 
-## PurchaseLink
+-   **UEDX46460015-MD50ET**
+    ---
+    The **Smart Knob Display** powered by **ESP32-S3**.  
+    Featuring a 1.5-inch **466x466** AMOLED Display (QSPI), capacitive touch, rotary encoder and button.  
+    Ideal for IoT control panels, smart home devices and industrial HMI.
 
-| Product                     | SOC           |  FLASH  |  PSRAM   | Link                   |
-| :------------------------: | :-----------: |:-------: | :---------: | :------------------: |
-| UEDX46460015-MD50E   | ESP32S3R8 |   16M   | 8M (Octal SPI) | [VIEWE Mall]()  |
+## 1. Introduction
 
+The **UEDX46460015-MD50ET** is a compact smart display module designed for knob‑style HMI applications.  
+It combines a 1.5‑inch AMOLED display (466×466 pixels) with a capacitive touch panel, a rotary encoder and a hardware button.
 
-## Module
+Powered by the **ESP32‑S3‑R8** (16 MB Flash, 8 MB Octal PSRAM), it provides Wi‑Fi and Bluetooth 5 (LE) connectivity, and supports development with **Arduino**, **ESP‑IDF** and **PlatformIO**.
 
-### 1.MCU
+### 1.1 Product Features
 
-* Chip: ESP32-S3-R8
-* PSRAM: 8M (Octal SPI) 
-* FLASH: 16M
-* For more details, please visit[Espressif ESP32-S3 Datashee](https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+* **Processor**:
+    * **ESP32-S3**: Xtensa® Dual‑Core 32‑bit LX7 MCU @ 240 MHz.
+    * Integrated 2.4 GHz Wi‑Fi (802.11 b/g/n) & Bluetooth 5 (LE).
+* **Memory**:
+    * **16 MB** Quad SPI Flash.
+    * **8 MB** Octal SPI PSRAM.
+* **Display & Touch**:
+    * **Screen**: 1.5‑inch IPS AMOLED (466×466 Resolution).
+    * **Interface**: QSPI.
+    * **Driver IC**: CO5300AF‑42.
+    * **Touch**: Capacitive Multi‑Touch (CST820) via I²C.
+* **Peripherals**:
+    * **Encoder**: Rotary encoder (PHA/PHB) for precise knob input.
+    * **Button**: Hardware button (shared with BOOT).
+    * **Connectivity**: USB‑C (USB/UART for programming and debugging), UART expansion (FPC).
+    * **Expansion FPC**: Extra GPIO, 5V, GND, UART0.
 
-### 2. Screen
+### 1.2 Applications
 
-* Size: 1.5-inch IPS screen
-* Resolution: 466x466px
-* Screen type: IPS
-* Driver chip: CO5300AF-42
-* Compatibility library:  ESP32_Display_Panel
-* Bus communication protocol: QSPI
+* Smart Home Control Knobs
+* Industrial Knob‑based HMI
+* IoT Device Dials
+* Wearable / Compact User Interfaces
 
-### 3. Touch
-
-* Touch Chip: CST820
-* Bus communication protocol: IIC
-
-## PinOverview
-
-| IPS Screen Pin  | ESP32S3 Pin|
-| :------------------: | :------------------:|
-| CS            | IO12    |
-| PCLK          | IO10    |
-|   DATA0       |  IO13   |
-|   DATA1       |  IO11   |
-|   DATA2       |  IO14   |
-|   DATA3       |  IO9   |
-| RST        | IO8       |
-| BACKLIGHT  | IO17       |
-
-| Touch Pin  | ESP32S3 Pin|
-| :------------------: | :------------------:|
-|   SDA   | IO0   |
-|   SCL   | IO1   |
-|   RST   | IO3   |
-|   INT   | IO4   |
-
-| button Pin  | ESP32S3 Pin|
-| :------------------: | :------------------:|
-|   boot    | IO0       |
-
-| Encoder Pin  | ESP32S3 Pin|
-| :------------------: | :------------------:|
-| PHA         | IO6       |
-| PHB         | IO5       |
-
-| USB/UART Pin  | ESP32S3 Pin|
-| :------------------: | :------------------:|
-| USB-DN         | IO19      |
-| USB-DP         | IO20      |
-
-## FPC PIN
-| FPC number | Adapter Pin  | ESP32S3 Pin|
-| :------------------: | :------------------: | :------------------:|
-|  1  |    5V      |    5V    |
-|  2  |    PB7     |  -   |
-|  3  |    GND     |    GND   |
-|  4  |    RX2     |    GPIO40    |
-|  5  |    TX2     |    GPIO39    |
-|  6  |    RX1     |    UART0RXD/GPIO44    |
-|  7  |    TX1     |    UART0TXD/GPIO43    |
-|  8  |     NC     |    CHIP-EN    |
-|  9  |   SK & D+   |   USB-DP/ GPIO20    |
-|  10 |   SD & D-   |    USB-DN/ GPIO19   |
-
-## Software
-
-We provide comprehensive support for **Arduino**, **PlatformIO**, and **ESP-IDF** frameworks, with pre-ported **LVGL** examples.
-
-### Software Examples
-Examples are available in the [GitHub Repository](examples).
-
-| Framework | Example Path | Description |
-| :--- | :--- | :--- |
-| **Arduino** | `examples/arduino/gui/lvgl_v8` | **LVGL Benchmark**: Usage example of lvgl v8. It can also be directly opened in the Arduino IDE. |
-| **esp-idf** | `examples/esp_idf` | **lvgl port**: Example of porting and using lvgl in esp-idf |
-| **PlatformIO**| `examples/platformio/lvgl_v8_port` | **lvgl v8 port**: Usage example of lvgl v8. |
-
-### Getting Started
-
-#### Preparation
-* **Hardware**: BOARD_VIEWE_UEDX46460015_MD50ET Board, USB-C Cable.
-* **Software**: VS Code (ESP-IDF v5.3+) or Arduino IDE (v2.0+) or VS Code (PlatformIO).
-* **Library**: The following libraries are needed for Arduino IDE and PlatformIO
-
-    |Libraries|version|Description|
-    | :--- | :--- | :--- |
-    |`ESP32_Display_Panel`| `1.0.3+` |by Espressif, This is necessary to drive the screen.|
-    |`ESP32_IO_Expander`| `Arduino automatic selection` |The dependency library of `ESP32_Display_Panel` should be selected for installation together during the installation process.|
-    |`esp-lib-utils`| `Arduino automatic selection` |The dependency library of `ESP32_Display_Panel` should be selected for installation together during the installation process.|
-    |`lvgl`| `8.4.0` | A free and open-source embedded graphics library. |
-
-#### ESP-IDF Setup
-
-| Support IDE | Version |
-| ------  | ------  |
-| `[ESP-IDF]` | `[V5.3/5.4/5.5]` |
-
-1.  **Open platformio example**
-    * go to GitHub to download the program. You can download the main branch by clicking on the "<> Code" with green text
-    * Open the example using VS Code(ESP-IDF)
-2.  **Compile and upload**:
-    * Click `build` in the upper right corner to compile.
-    * connect the microcontroller to the computer.If the compilation is correct.
-    * Click `upload` in the upper right corner to download.
-
-#### Arduino Setup ([Novice tutorial](https://github.com/VIEWESMART/VIEWE-Tutorial/blob/main/Arduino%20Tutorial/Arduino%20Getting%20Started%20Tutorial.md))
-1.  **Install[Arduino](https://www.arduino.cc/en/software)**
-    - Choose installation based on your system type.
-    - Newcomers please refer to the [beginner's tutorial](https://github.com/VIEWESMART/VIEWE-Tutorial/blob/main/Arduino%20Tutorial/Arduino%20Getting%20Started%20Tutorial.md).
-2.  **Install ESP32 Board Package**:
-    - Open Arduino IDE
-    - Go to `File` > `Preferences`
-    - Add to `Additional boards manager URLs`:
-    ```
-    https://espressif.github.io/arduino-esp32/package_esp32_index.json
-    ```
-    * Go to *Tools > Board > Boards Manager*.
-    * Search `esp32` by Espressif and install version **3.0.0+**.
-3.  **Install Libraries**:
-    * Go to *Sketch > Include Library > Library Manager*.
-    * Search `ESP32_Display_Panel` by Espressif and install version **1.0.3+**. You will be prompted whether to install its dependencies, please click **INSTALL ALL** to install all.
-    * Install `lvgl` (v8.4.0 recommended).
-4.  **Open example**:
-    * Navigate to `File` > `Examples` > `ESP32_Display_Panel`
-    * Select `Arduino` > `gui` > `lvgl_v8` > `simple_port`
-5.  **Select Board**:
-    * Target: `ESP32S3 Dev Module`.
-    * Settings:
-        * **Flash Size**: 16MB (128Mb)
-        * **Partition Scheme**: 16M Flash (3MB APP/9.9MB FATFS)
-        * **PSRAM**: **OPI PSRAM** (Crucial!)
-6.  **config esp supported panel board**:
-    * Open the `esp_panel_board_supported_conf.h` file in the example
-    * Enable this file: change the `ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED` macro definition to `1`
-    * ensure you uncomment: `#define BOARD_VIEWE_UEDX46460015_MD50ET`
-    ```c
-    ...
-    /**
-    * @brief Flag to enable supported board configuration (0/1)
-    *
-    * Set to `1` to enable supported board configuration, `0` to disable
-    */
-    #define ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED       (1)
-    ...
-    // #define BOARD_VIEWE_SMARTRING
-    // #define BOARD_VIEWE_UEDX24240013_MD50E
-    // #define BOARD_VIEWE_UEDX24320024E_WB_A
-    // #define BOARD_VIEWE_UEDX24320028E_WB_A
-    // #define BOARD_VIEWE_UEDX24320035E_WB_A
-    // #define BOARD_VIEWE_UEDX32480035E_WB_A
-    #define BOARD_VIEWE_UEDX46460015_MD50ET
-    // #define BOARD_VIEWE_UEDX48270043E_WB_A
-    // #define BOARD_VIEWE_UEDX48480021_MD80E_V2
-    // #define BOARD_VIEWE_UEDX48480021_MD80E
-    // #define BOARD_VIEWE_UEDX48480021_MD80ET
-    // #define BOARD_VIEWE_UEDX48480028_MD80ET
-    // #define BOARD_VIEWE_UEDX48480040E_WB_A
-    // #define BOARD_VIEWE_UEDX80480043E_WB_A
-    // #define BOARD_VIEWE_UEDX80480050E_AC_A
-    // #define BOARD_VIEWE_UEDX80480050E_WB_A
-    // #define BOARD_VIEWE_UEDX80480050E_WB_A_2
-    // #define BOARD_VIEWE_UEDX80480070E_WB_A
-    ...
-    ```
-7.  **Configure the example**:
-    - [Optional] Edit the macro definitions in the `lvgl_v8_port.h` file
-        - **If using `RGB/MIPI-DSI` interface**, change the `LVGL_PORT_AVOID_TEARING_MODE` macro definition to `1`/`2`/`3` to enable the avoid tearing function. After that, change the `LVGL_PORT_ROTATION_DEGREE` macro definition to the target rotation degree
-        - **If using other interfaces**, please don't modify the `LVGL_PORT_AVOID_TEARING_MODE` and `LVGL_PORT_ROTATION_DEGREE` macro definitions
-    - [Optional] Edit the macro definitions in the `lv_conf.h` file
-        - **If using `SPI/QSPI` interface**, change the `LV_COLOR_16_SWAP` macro definition to `1`.
-8.  **Select the correct port**:
-    * Connect to the device.
-    * Go to *Tools > Port*, Select the corresponding port.
-9.  **Compile and upload**:
-    * Click `√` in the upper right corner to compile.
-    * connect the microcontroller to the computer.If the compilation is correct.
-    * Click `→` in the upper right corner to download.
-
-
-> [!TIP]
-> **Configuration**: In `esp_panel_board_supported_conf.h`, ensure you uncomment:
-> `#define BOARD_VIEWE_UEDX46460015_MD50ET`
-> Do not enable both `ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED` and `ESP_PANEL_BOARD_DEFAULT_USE_CUSTOM`
-> You cannot enable multiple esp supported panel boards at the same time.
-
-#### 3.2.4 PlatformIO Setup
-1.  **Open platformio example**
-    * go to GitHub to download the program. You can download the main branch by clicking on the "<> Code" with green text
-    * Open the example using VS Code(PlatformIO)
-2.  **Configure PlatformIO**:
-    * This example uses the `BOARD_ESPRESSIF_ESP32_S3_LCD_EV_BOARD_2_V1_5` board as default. Choose `BOARD_VIEWE_UEDX46460015_MD50ET` in the `[platformio]:default_envs` of the `platformio.ini` file.
-3.  **Configure the example**:
-    - [Optional] Edit the macro definitions in the `lvgl_v8_port.h` file
-        - **If using `RGB/MIPI-DSI` interface**, change the `LVGL_PORT_AVOID_TEARING_MODE` macro definition to `1`/`2`/`3` to enable the avoid tearing function. After that, change the `LVGL_PORT_ROTATION_DEGREE` macro definition to the target rotation degree
-        - **If using other interfaces**, please don't modify the `LVGL_PORT_AVOID_TEARING_MODE` and `LVGL_PORT_ROTATION_DEGREE` macro definitions
-4.  **Compile and upload the project**
-    - Click the `√`(Compile) button
-    - Connect the board to your computer.If the compilation is correct.
-    - Click the `→`(upload) button
 ---
 
-### firmware download
-1. Open the project file "tools" and locate the ESP32 burning tool. Open it.
+## 2. Hardware Description
 
-2. Select the correct burning chip and burning method, then click "OK." As shown in the picture, follow steps 1->2->3->4->5 to burn the program. If the burning is not successful, press and hold the "BOOT-0" button and then download and burn again.
+### 2.1 Module Overview
 
-3. Burn the file in the root directory of the project file "[firmware](./firmware/)" file,There is a description of the firmware file version inside, just choose the appropriate version to download.
+The main functional blocks of the board are:
+
+| Component | Description |
+| :--- | :--- |
+| **ESP32‑S3‑R8** | Main SoC (16 MB Flash / 8 MB Octal PSRAM). |
+| **1.5" AMOLED** | 466×466 pixel display driven by QSPI (CO5300AF‑42). |
+| **CST820** | Capacitive touch controller (I²C). |
+| **Rotary Encoder** | 2‑phase encoder (PHA/PHB) for knob rotation. |
+| **Button** | BOOT button (also used for firmware download). |
+| **USB‑C** | Programming, debug (UART via USB) and power (5V). |
+| **FPC Connector** | Additional power, UART0 and UART2 signals. |
+
+### 2.2 GPIO Definition (Pinout)
+
+#### **Display (QSPI)**
+| Display Pin | ESP32‑S3 Pin |
+| :---: | :---: |
+| CS | IO12 |
+| PCLK | IO10 |
+| DATA0 | IO13 |
+| DATA1 | IO11 |
+| DATA2 | IO14 |
+| DATA3 | IO9 |
+| RST | IO8 |
+| BACKLIGHT | IO17 |
+
+#### **Touch (CST820)**
+| Touch Pin | ESP32‑S3 Pin |
+| :---: | :---: |
+| SDA | IO0 |
+| SCL | IO1 |
+| RST | IO3 |
+| INT | IO4 |
+
+#### **Button**
+| Button Pin | ESP32‑S3 Pin |
+| :---: | :---: |
+| BOOT | IO0 |
+
+#### **Encoder**
+| Encoder Pin | ESP32‑S3 Pin |
+| :---: | :---: |
+| PHA | IO6 |
+| PHB | IO5 |
+
+#### **USB / UART**
+| USB/UART Pin | ESP32‑S3 Pin |
+| :---: | :---: |
+| USB‑DN | IO19 |
+| USB‑DP | IO20 |
+
+#### **FPC Connector Pinout**
+| FPC Pin | Adapter Signal | ESP32‑S3 Pin |
+| :---: | :--- | :--- |
+| 1 | 5V | 5V |
+| 2 | PB7 | – |
+| 3 | GND | GND |
+| 4 | RX2 | GPIO40 |
+| 5 | TX2 | GPIO39 |
+| 6 | RX1 | U0RXD / GPIO44 |
+| 7 | TX1 | U0TXD / GPIO43 |
+| 8 | NC | CHIP‑EN |
+| 9 | D+ (USB‑DP) | GPIO20 |
+|10 | D‑ (USB‑DN) | GPIO19 |
+
+### 2.3 Mechanical Dimensions
+
+Refer to the product specification sheet for detailed dimensions.
+
+---
+
+## 3. Software
+
+We provide comprehensive support for **Arduino**, **PlatformIO**, and **ESP‑IDF** frameworks, with pre‑ported **LVGL** examples.
+
+### 3.1 Software Examples
+
+Examples are available in the [GitHub Repository](https://github.com/VIEWESMART/ESP32-1.5inch-AMOLED-Knob) (examples folder).
+
+| Framework | Example Path | Description |
+| :---: | :--- | :--- |
+| **Arduino** | `examples/arduino/gui/lvgl_v8` | **LVGL Benchmark**: Usage example of LVGL v8. Can be opened directly in Arduino IDE. |
+| **ESP‑IDF** | `examples/esp_idf` | **LVGL port**: Example of porting and using LVGL in ESP‑IDF. |
+| **PlatformIO** | `examples/platformio/lvgl_v8_port` | **LVGL v8 port**: Usage example of LVGL v8. |
+
+### 3.2 Getting Started
+
+#### 3.2.1 Preparation
+
+* **Hardware**: UEDX46460015‑MD50ET Board, USB‑C Cable.
+* **Software**: VS Code (ESP‑IDF v5.3+) or Arduino IDE (v2.0+) or VS Code (PlatformIO).
+* **Libraries**: The following libraries are required for Arduino IDE and PlatformIO.
+
+| Library | Version | Description |
+| :--- | :--- | :--- |
+| `ESP32_Display_Panel` | `1.0.3+` | By Espressif. Necessary to drive the screen. |
+| `ESP32_IO_Expander` | *Arduino auto selection* | Dependency of `ESP32_Display_Panel`. |
+| `esp-lib-utils` | *Arduino auto selection* | Dependency of `ESP32_Display_Panel`. |
+| `lvgl` | `8.4.0` | Open‑source embedded graphics library. |
+
+#### 3.2.2 ESP‑IDF Setup
+
+1.  **Open the example**  
+    * Download the repository from GitHub (click the green "Code" button and select "Download ZIP", or clone it).  
+    * Open the example folder (e.g., `examples/esp_idf`) using VS Code with the ESP‑IDF extension.
+
+2.  **Compile and upload**  
+    * Click the **build** icon to compile the project.  
+    * Connect the board via USB‑C.  
+    * Click the **upload** icon to flash the firmware.
+
+#### 3.2.3 Arduino Setup([Novice tutorial](https://github.com/VIEWESMART/VIEWE-Tutorial/blob/main/Arduino%20Tutorial/Arduino%20Getting%20Started%20Tutorial.md))
+
+1.  **Install Arduino IDE**  
+    * Download and install the [Arduino IDE](https://www.arduino.cc/en/software) (v2.0+ recommended).
+
+2.  **Install ESP32 Board Package**  
+    * Open Arduino IDE and go to **File > Preferences**.  
+    * Add the following URL in “Additional boards manager URLs”:  
+      `https://espressif.github.io/arduino-esp32/package_esp32_index.json`  
+    * Go to **Tools > Board > Boards Manager**, search for `esp32` by Espressif and install version **3.0.0+**.
+
+3.  **Install Libraries**  
+    * Go to **Sketch > Include Library > Library Manager**.  
+    * Search for `ESP32_Display_Panel` by Espressif and install version **1.0.3+**. When prompted, click **INSTALL ALL** to install the dependencies.  
+    * Install `lvgl` (version **8.4.0**).
+
+4.  **Open Example**  
+    * Navigate to **File > Examples > ESP32_Display_Panel**.  
+    * Select **Arduino > gui > lvgl_v8 > simple_port**.
+
+5.  **Select Board**  
+    * Target: **ESP32S3 Dev Module**.  
+    * Configure the following settings:
+        * **Flash Size**: 16MB (128Mb)
+        * **Partition Scheme**: 16M Flash (3MB APP/9.9MB FATFS)
+        * **PSRAM**: **OPI PSRAM** (this is critical)
+
+6.  **Configure the Supported Board**  
+    * In the example, open the file `esp_panel_board_supported_conf.h`.  
+    * Set the macro `ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED` to `1`.  
+    * Locate the line `// #define BOARD_VIEWE_UEDX46460015_MD50ET` and uncomment it by removing the `//`.  
+    * Ensure no other board definition is enabled at the same time.
+
+7.  **Interface‑Specific Configuration**  
+    * Since the board uses a **QSPI** interface, open `lv_conf.h` (or the example’s `lv_conf.h` equivalent) and set `LV_COLOR_16_SWAP` to `1`.  
+    * **Do not** modify `LVGL_PORT_AVOID_TEARING_MODE` or `LVGL_PORT_ROTATION_DEGREE` (they are only relevant for RGB/MIPI displays).
+
+8.  **Select Port and Upload**  
+    * Connect the board, then go to **Tools > Port** and select the correct COM port.  
+    * Click the **Verify** (✓) button to compile.  
+    * Click the **Upload** (→) button to flash.
+
+> [!TIP]
+> **Configuration Tips**  
+> * In `esp_panel_board_supported_conf.h`, ensure you uncomment: `#define BOARD_VIEWE_UEDX46460015_MD50ET`.  
+> * Do not enable both `ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED` and `ESP_PANEL_BOARD_DEFAULT_USE_CUSTOM`.  
+> * You cannot enable multiple board definitions at the same time.
+
+#### 3.2.4 PlatformIO Setup
+
+1.  **Open the example**  
+    * Download the repository and open the `examples/platformio/lvgl_v8_port` folder in VS Code with the PlatformIO extension.
+
+2.  **Select the Board Environment**  
+    * Open the `platformio.ini` file.  
+    * Change the `default_envs` line to `BOARD_VIEWE_UEDX46460015_MD50ET`.
+
+3.  **Configure the Example**  
+    * (QSPI interface) In `lv_conf.h`, set `LV_COLOR_16_SWAP` to `1`.  
+    * Leave `LVGL_PORT_AVOID_TEARING_MODE` and `LVGL_PORT_ROTATION_DEGREE` untouched.
+
+4.  **Compile and Upload**  
+    * Click the **✓** (Compile) button.  
+    * Connect the board, then click the **→** (Upload) button.
+      
+### 3.3 Firmware Download (Manual Flash)
+
+If you need to flash a pre‑compiled binary manually:
+
+1.  Open the “Flash Download Tool” (available in the tools folder or from Espressif’s website).
+2.  Select the chip type (**ESP32‑S3**) and the correct download method.
+3.  Load the firmware files from the `firmware` folder and configure the offsets as described in the firmware readme.
+4.  Connect the board and start the download.  
+    *If flashing fails, hold down the **BOOT** button while powering on, then retry.*
 
 <p align="center" width="100%">
     <img src="image/10.png" alt="example">
     <img src="image/11.png" alt="example">
 </p>
+
 
 ## FAQ
 
