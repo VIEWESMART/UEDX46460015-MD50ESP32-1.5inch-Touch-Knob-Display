@@ -150,7 +150,9 @@
 | `esp-lib-utils` | *Arduino 自动选择* | `ESP32_Display_Panel` 的依赖库。 |
 | `lvgl` | `8.4.0` | 开源嵌入式图形库。 |
 
-#### 3.2.2 ESP‑IDF 设置
+#### 3.2.2 ESP‑IDF 步骤
+
+详细流程请查阅esp-idf示例目录下的[README.md](examples/ESP-IDF/UEDX46460015-MD50E-IDF/README.md)或[README_CN.md](examples/ESP-IDF/UEDX46460015-MD50E-IDF/README_CN.md)文件。大致步骤如下：
 
 1.  **打开示例**  
     * 从 GitHub 下载仓库（点击绿色 “Code” 按钮并选择 “Download ZIP”，或克隆仓库）。  
@@ -161,7 +163,7 @@
     * 通过 USB‑C 连接开发板。  
     * 点击 **上传** 图标烧录固件。
 
-#### 3.2.3 Arduino 设置 ([新手教程](https://github.com/VIEWESMART/VIEWE-Tutorial/blob/main/Arduino%20Tutorial/Arduino%20Getting%20Started%20Tutorial.md))
+#### 3.2.3 Arduino 步骤 ([新手教程](https://github.com/VIEWESMART/VIEWE-Tutorial/blob/main/Arduino%20Tutorial/Arduino%20Getting%20Started%20Tutorial.md))
 
 1.  **安装 Arduino IDE**  
     * 下载并安装 [Arduino IDE](https://www.arduino.cc/en/software) (推荐 v2.0+)。
@@ -209,7 +211,7 @@
 > * 不要同时启用 `ESP_PANEL_BOARD_DEFAULT_USE_SUPPORTED` 和 `ESP_PANEL_BOARD_DEFAULT_USE_CUSTOM`。  
 > * 不能同时启用多个板卡定义。
 
-#### 3.2.4 PlatformIO 设置
+#### 3.2.4 PlatformIO 步骤
 
 1.  **打开示例**  
     * 下载仓库，并在已安装 PlatformIO 扩展的 VS Code 中打开 `examples/platformio/lvgl_v8_port` 文件夹。
