@@ -1,12 +1,10 @@
 <h1 align = "center">UEDX46460015-MD50ESP32-1.5inch-Touch-Knob-Display</h1>
 
+ * **[中文](./README_CN.md)**
+
 <p align="center" width="90%">
     <img src="image/Main.png" alt="">
 </p>
-
- * **English | [中文](./README_CN.md)**
-
-# ESP32 1.5 Inch AMOLED Touch Knob Display
 
 -   **UEDX46460015-MD50ET**
     ---
@@ -265,10 +263,7 @@ If you need to flash a pre‑compiled binary manually:
 * Q. Why is my board continuously failing to download the program?
 * A. Please hold down the "BOOT" button and try downloading the program again.
 
-## Schematic
-<p align="center" width="100%">
-    <img src="schematic/1.5%20MD50E%20SCH.V2.0_00.png" alt="example">
-</p>
+
 
 ## Information
 [products specification](information/UEDX48480021-MD80E%20V3.3%20SPEC.pdf)
@@ -279,12 +274,5 @@ If you need to flash a pre‑compiled binary manually:
 
 [Encoder](information/C219783_%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8_EC28A1520401_%E8%A7%84%E6%A0%BC%E4%B9%A6_WJ239718.PDF)
 
-## DependentLibraries
-* [ESP32_Display_Panel>0.2.1](https://github.com/esp-arduino-libs/ESP32_Display_Panel) (Please [download](./Libraries/ESP32_Display_Panel) the library first as the latest version has not been released yet)
-* [ESP32_IO_Expander](https://github.com/esp-arduino-libs/ESP32_IO_Expander) (Please [download](./Libraries/ESP32_IO_Expander) the library first as the latest version has not been released yet)
-* [ESP32_Button](https://github.com/esp-arduino-libs/ESP32_Button)
-* [ESP32_Knob](https://github.com/esp-arduino-libs/ESP32_Knob)
-* [lvgl-8.4.0](https://lvgl.io)
-
-
+[schematic](schematic/1.5%20MD50E%20SCH.V2.0_00.png)
 
