@@ -154,14 +154,15 @@ Examples are available in the [GitHub Repository](https://github.com/VIEWESMART/
 #### 3.2.2 ESP‑IDF Setup
 
 For detailed procedures, please refer to the esp-idf example folder at [README.md](examples/ESP-IDF/UEDX46460015-MD50E-IDF/README.md) or [README_CN.md](examples/ESP-IDF/UEDX46460015-MD50E-IDF/README_CN.md). The general steps are as follows:
-    1.  **Open the example**  
-        * Download the repository from GitHub (click the green "Code" button and select "Download ZIP", or clone it).  
-        * Open the example folder (e.g., `examples/esp_idf`) using VS Code with the ESP‑IDF extension.
+
+1.  **Open the example**  
+    * Download the repository from GitHub (click the green "Code" button and select "Download ZIP", or clone it).  
+    * Open the example folder (e.g., `examples/esp_idf`) using VS Code with the ESP‑IDF extension.
     
-    2.  **Compile and upload**  
-        * Click the **build** icon to compile the project.  
-        * Connect the board via USB‑C.  
-        * Click the **upload** icon to flash the firmware.
+2.  **Compile and upload**  
+    * Click the **build** icon to compile the project.  
+    * Connect the board via USB‑C.  
+    * Click the **upload** icon to flash the firmware.
 
 #### 3.2.3 Arduino Setup([Novice tutorial](https://github.com/VIEWESMART/VIEWE-Tutorial/blob/main/Arduino%20Tutorial/Arduino%20Getting%20Started%20Tutorial.md))
 
