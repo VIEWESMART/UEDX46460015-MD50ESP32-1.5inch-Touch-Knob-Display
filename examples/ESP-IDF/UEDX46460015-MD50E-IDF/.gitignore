@@ -1,0 +1,27 @@
+# ESP-IDF build / tool artifacts
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+.cache/
+
+# Editor / OS (keep shared extension recommendations)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local-only backup / temp
+_local_bsp_backup/
+_*.py
+__pycache__/
+*.pyc
+dist/
+*.tgz
+
+# Logs / compile DB
+*.log
+compile_commands.json

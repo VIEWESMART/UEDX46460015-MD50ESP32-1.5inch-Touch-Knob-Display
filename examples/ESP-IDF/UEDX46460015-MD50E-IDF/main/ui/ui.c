@@ -64,7 +64,6 @@ const lv_img_dsc_t * ui_imgset_back[1] = {&ui_img_back111_png};
 #if LV_COLOR_16_SWAP !=1
     #error "LV_COLOR_16_SWAP should be 1 to match SquareLine Studio's settings"
 #endif
-#include "led_strip.h"
 
 #ifndef HF_ws2812
 #define HF_ws2812 0
@@ -72,6 +71,7 @@ const lv_img_dsc_t * ui_imgset_back[1] = {&ui_img_back111_png};
 
 //彩灯///
 #if HF_ws2812
+#include "led_strip.h"
 extern  led_strip_handle_t led_strip;
 #endif
 #define LED_STRIP_LED_NUMBERS 8

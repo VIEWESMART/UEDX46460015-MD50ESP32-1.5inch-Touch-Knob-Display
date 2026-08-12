@@ -1,25 +1,10 @@
 dependencies:
-  espressif/led_strip: "^2.5.5"
-  idf: ">5.0.4,!=5.1.1"
-  esp_lcd_gc9b71:
-    public: true
-    version: '*'
-  esp_lcd_sh8601:
-    public: true
-    version: '*'
-  esp_lcd_spd2010:
-    public: true
-    version: '*'
-  esp_lcd_touch_spd2010:
-    public: true
-    version: ^0.0.1
+  idf: ">=5.5"
+  viewesmart/bsp_knob_15_md50et: "^1.0.2"
+  # Pin LVGL major for SquareLine export:
+  #   "^8.3.11"  -> SquareLine LVGL 8.x UI (current demo)
+  #   "^9"       -> SquareLine / UI built for LVGL 9.x
+  # bsp_knob_15_md50et accepts both via lvgl ">=8,<10"
   lvgl/lvgl:
-    public: true
-    version: ^8
-  espressif/knob:
-    version: "==1.0.0"
-    public: true
-
-  espressif/button:
-    version: "==3.3.1"
+    version: "^8.3.11"
     public: true

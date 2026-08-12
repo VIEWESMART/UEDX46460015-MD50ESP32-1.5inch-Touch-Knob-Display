@@ -74,6 +74,8 @@ LV_IMG_DECLARE(ui_img_2062528660);    // assets/申请成功勾勾_icon.png
 
 
 void ui_init(void);
+void LVGL_knob_event(void *event);
+void LVGL_button_event(void *event);
 
 #ifdef __cplusplus
 } /*extern "C"*/
